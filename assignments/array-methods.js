@@ -85,7 +85,19 @@ console.log(ticketPriceTotal);
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
+// The race organizers want a list of all the runners' emails.
+const emails = []
+runners.forEach(runner => emails.push(runner.email))
+console.log(emails)
 
 // Problem 2
+// Return a list of runners and their details who work for Skinix
+const skinixWorkers = runners.filter(runner => runner.company_name === 'Skinix')
+console.log(skinixWorkers)
 
 // Problem 3
+// Find and return the first name of the top donors (those who paid more than $250)
+const topDonors = runners
+  .filter(runner => runner.donation >= 250)
+  .map(runner => runner.first_name)
+console.log(topDonors)
