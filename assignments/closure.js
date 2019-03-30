@@ -1,6 +1,14 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
-
+const lambda = () => {
+  const school = 'Lambda School'
+  const attendance = () => {
+    const student = 'Cedric'
+    console.log(`${student} is currently attending ${school}.`)
+  }
+  attendance()
+}
+lambda()
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
